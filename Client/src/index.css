@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Brand palette
+   ------------------------------------------------------------------ */
+:root {
+  --pink: #ec0a72;
+  --pink-dark: #9d0750;
+  --pink-soft: #fde7f1;
+  --rose: #fff4f8;
+  --peach: #ffb078;
+  --cream: #fffafc;
+  --ink: #24141d;
+  --muted: #6f6269;
+  --white: #ffffff;
+  --border: #f0cddd;
+  --shadow: 0 18px 45px rgba(157, 7, 80, 0.12);
+}
+
+/* ------------------------------------------------------------------
+   Remap Tailwind's default colours to the palette above, so every
+   existing class (bg-blue-600, text-gray-900, bg-black ...) picks up
+   the new look without touching the components.
+   ------------------------------------------------------------------ */
+@theme {
+  /* Main accent (was blue) -> pink */
+  --color-blue-50: var(--rose);
+  --color-blue-100: var(--pink-soft);
+  --color-blue-200: var(--border);
+  --color-blue-300: #f58cba;
+  --color-blue-400: #f2569b;
+  --color-blue-500: var(--pink);
+  --color-blue-600: var(--pink);
+  --color-blue-700: #c2085f;
+  --color-blue-800: var(--pink-dark);
+  --color-blue-900: #7a053e;
+
+  /* Neutrals (was cool gray) -> warm ink / rose tones */
+  --color-black: var(--ink);
+  --color-gray-50: var(--rose);
+  --color-gray-100: #fceff5;
+  --color-gray-200: var(--border);
+  --color-gray-300: #e4bacd;
+  --color-gray-400: #b5a2ac;
+  --color-gray-500: #86767e;
+  --color-gray-600: var(--muted);
+  --color-gray-700: #4a3a43;
+  --color-gray-800: #33212b;
+  --color-gray-900: var(--ink);
+  --color-gray-950: #170b11;
+  --color-slate-900: var(--ink);
+
+  /* Warm accents (stars, highlights) -> peach */
+  --color-yellow-400: var(--peach);
+  --color-orange-50: #fff4ec;
+  --color-orange-100: #ffe6d4;
+  --color-orange-400: var(--peach);
+  --color-orange-600: #e8803f;
+  --color-amber-100: #ffe6d4;
+  --color-amber-200: #ffd2b0;
+  --color-amber-600: #e8803f;
+  --color-amber-800: #9a4a16;
+
+  /* Other accents -> pink family */
+  --color-purple-50: var(--rose);
+  --color-purple-100: var(--pink-soft);
+  --color-purple-400: #f2569b;
+  --color-purple-600: var(--pink);
+  --color-indigo-100: var(--pink-soft);
+  --color-indigo-600: var(--pink);
+  --color-pink-100: var(--pink-soft);
+  --color-pink-500: var(--pink);
+  --color-pink-600: var(--pink);
+  --color-rose-100: var(--pink-soft);
+  --color-rose-600: var(--pink-dark);
+
+  /* Soft pink-tinted shadows */
+  --shadow-sm: 0 2px 8px rgba(157, 7, 80, 0.08);
+  --shadow-md: 0 8px 24px rgba(157, 7, 80, 0.1);
+  --shadow-lg: 0 12px 32px rgba(157, 7, 80, 0.12);
+  --shadow-xl: 0 18px 45px rgba(157, 7, 80, 0.12);
+  --shadow-2xl: 0 24px 60px rgba(157, 7, 80, 0.18);
+}
+
+/* ------------------------------------------------------------------
+   Base styles
+   ------------------------------------------------------------------ */
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--pink-soft);
+  color: var(--pink-dark);
+}
